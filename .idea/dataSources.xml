@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="wishlist@127.0.0.1" uuid="ff633c21-7bd8-4ce8-bbd4-c15e472c1616">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://127.0.0.1:27017/wishlist</jdbc-url>
+    </data-source>
+  </component>
+</project>

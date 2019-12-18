@@ -1,0 +1,38 @@
+{
+  "name": "wishlist",
+  "alias": [
+    "wishingwell"
+  ],
+  "version": 2,
+  "env": {
+    "MONGODB_URI": "@mongodb_uri"
+  },
+  "builds": [
+    {
+      "src": "serverless/index.go",
+      "use": "@now/go"
+    },
+    {
+      "src": "*/**/*.html",
+      "use": "@now/static"
+    },
+    {
+      "src": "public/*",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "public/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "serverless/index.go"
+    },
+    {
+      "src": "/public/(js|css)/(.*)",
+      "dest": "public/$1/$2"
+    }
+  ]
+}

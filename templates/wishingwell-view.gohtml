@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WishingWell</title>
+</head>
+<body>
+<div>
+    <h1>{{.Owner}}'s Wishlist</h1>
+</div>
+<div>
+    <ul class="wishlist">
+        {{range .Wishlist}}
+            <div class="wish">
+                <div class="wish-title">{{.Title}}</div>
+                {{if .Link}}
+                    <div class="link-holder"><a id="wish-link" href="{{.Link}}"></a></div>
+                {{end}}
+                <p class="wish-body">{{.Body}}</p>
+            </div>
+        {{end}}
+    </ul>
+</div>
+</body>
+</html>

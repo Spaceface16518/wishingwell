@@ -13,7 +13,7 @@
       "use": "@now/go"
     },
     {
-      "src": "*/**/*.html",
+      "src": "templates/*",
       "use": "@now/static"
     },
     {
@@ -23,11 +23,7 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "public/index.html"
-    },
-    {
-      "src": "/(.*)",
+      "src": "/.*",
       "dest": "serverless/index.go"
     },
     {
